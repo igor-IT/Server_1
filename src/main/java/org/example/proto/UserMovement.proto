@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message Vector3 {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Rotation {
+  float pitch = 1;
+  float yaw = 2;
+  float roll = 3;
+}
+
+message UserMovement {
+  int32 user_id = 1;
+  Vector3 position = 2;
+  Rotation rotation = 3;
+  Vector3 velocity = 4;
+  int64 timestamp = 5;  // Unix timestamp
+}
